@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Publisher;
 import pl.coderslab.service.BookService;
 
 
@@ -18,9 +19,10 @@ public class BookController {
     @RequestMapping(path = "/createBook")
     @ResponseBody
     public String createBook() {
-        Book book = new Book("Java", "Artur", 9.20, "CodersLab", "fajna książka");
+        Publisher publisher = new Publisher("Helios");
+        Book book = new Book("Java", "Artur", 9.20, publisher, "fajna książka");
         bookService.saveBookService(book);
-        return "Utworzono książkę" + book;
+        return "Utworzono książkę : " + book;
     }
 
     @RequestMapping(path = "/changeBook/{id}")
@@ -28,14 +30,14 @@ public class BookController {
     public String changeBook(@PathVariable Long id) {
         Long display = id;
         bookService.editBookService(id);
-        return "Książka została zedytowana"+display;
+        return "Książka została zedytowana : "+display;
     }
 
     @RequestMapping("/getBook/{id}")
     @ResponseBody
     public String getBook(@PathVariable Long id) {
         Book book = bookService.findByIdService(id);
-        return "Wybrałes ksiażke:"+book;
+        return "Wybrałes ksiażke :"+book;
 
     }
     @RequestMapping("/deleteBook/{id}")

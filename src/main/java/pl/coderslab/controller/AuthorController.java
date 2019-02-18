@@ -20,7 +20,7 @@ public class AuthorController {
     public String createAuthor() {
         Author author = new Author("Jan", "Kowalski");
         authorService.saveAuthorService(author);
-        return "Utworzono autora" + author;
+        return "Utworzono autora : " + author;
     }
 
     @RequestMapping(path = "/changeAuthor/{id}")
@@ -28,14 +28,14 @@ public class AuthorController {
     public String changeAuthor(@PathVariable Long id) {
         Long display = id;
         authorService.editAuthorService(id);
-        return "Autor został zedytowany"+display;
+        return "Autor został zedytowany : "+display;
     }
 
     @RequestMapping("/getAuthor/{id}")
     @ResponseBody
     public String getAuthor(@PathVariable Long id) {
         Author author = authorService.findAuthorByIdService(id);
-        return "Wybrałes autora:"+author;
+        return "Wybrałes autora : "+author;
 
     }
     @RequestMapping("/deleteAuthor/{id}")

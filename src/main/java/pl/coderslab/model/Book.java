@@ -20,13 +20,13 @@ public class Book {
     @Column(nullable = false, precision = 4, scale = 2)
     private Double rating;
 
-    @Column(nullable = false, length = 125)
-    private String publisher;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Publisher publisher;
 
     @Column(length = 1000)
     private String description;
 
-    public Book(String title, String author, Double rating, String publisher, String description) {
+    public Book(String title, String author, Double rating, Publisher publisher, String description) {
         this.title = title;
         this.author = author;
         this.rating = rating;
@@ -78,11 +78,11 @@ public class Book {
         this.rating = rating;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 

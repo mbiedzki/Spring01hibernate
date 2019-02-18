@@ -1,6 +1,8 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="publishers")
@@ -15,6 +17,9 @@ public class Publisher {
     public Publisher(String name) {
         this.name = name;
     }
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "publisher")
+    private List<Book> books = new ArrayList<>();
 
     public Publisher() {
     }
