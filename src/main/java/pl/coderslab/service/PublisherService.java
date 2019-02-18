@@ -3,7 +3,10 @@ package pl.coderslab.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.coderslab.dao.PublisherDao;
+import pl.coderslab.model.Author;
 import pl.coderslab.model.Publisher;
+
+import java.util.List;
 
 @Service
 public class PublisherService {
@@ -29,5 +32,10 @@ public class PublisherService {
     public void deletePublisherService(Long id) {
         Publisher entity = findPublisherByIdService(id);
         publisherDao.delete(entity);
+    }
+
+    public List<Publisher> readAllPublisherService() {
+        List<Publisher> publisherList = publisherDao.findAll();
+        return publisherList;
     }
 }

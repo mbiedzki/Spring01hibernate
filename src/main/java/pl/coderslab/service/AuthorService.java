@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.coderslab.dao.AuthorDao;
 import pl.coderslab.model.Author;
+import pl.coderslab.model.Person;
+
+import java.util.List;
 
 @Service
 public class AuthorService {
@@ -29,5 +32,10 @@ public class AuthorService {
     public void deleteAuthorService(Long id) {
         Author entity = findAuthorByIdService(id);
         authorDao.delete(entity);
+    }
+
+    public List<Author> readAllAuthorService() {
+        List<Author> authorList = authorDao.findAll();
+        return authorList;
     }
 }

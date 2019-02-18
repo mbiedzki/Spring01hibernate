@@ -9,6 +9,8 @@ import pl.coderslab.dao.PersonDao;
 import pl.coderslab.dao.PersonDetailsDao;
 import pl.coderslab.model.*;
 
+import java.util.List;
+
 
 @Controller
 @RequestMapping(path="/persons", produces = "text/html; charset=UTF-8")
@@ -54,6 +56,13 @@ public class PersonController {
         Person person = personDao.findById(id);
         personDao.delete(person);
         return "Usunięto osobę : " + person;
+    }
+
+    @RequestMapping(path = "/readAllPerson")
+    @ResponseBody
+    public String readAllPerson() {
+        List<Person> personList = personDao.findAll();
+        return "Znaleziono osoby : " + personList;
     }
 
 }

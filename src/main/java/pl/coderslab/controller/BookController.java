@@ -55,4 +55,12 @@ public class BookController {
 
     }
 
+    @RequestMapping("/getAllBook")
+    @ResponseBody
+    public String getAllBook() {
+        List<Book> bookList = bookService.readAllBookService();
+        return "Wszystkie książki : " + bookList;
+
+    }
+
 }

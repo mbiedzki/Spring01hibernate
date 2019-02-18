@@ -7,6 +7,8 @@ import pl.coderslab.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Component
 @Transactional
@@ -29,5 +31,11 @@ public class PersonDao {
     public void delete(Person person) {
         entityManager.remove(entityManager.contains(person) ?
                 person : entityManager.merge(person));
+    }
+
+    public List<Person> findAll() {
+        Query query = entityManager.createQuery("SELECT person FROM Person person");
+        List<Person> personList  = query.getResultList();
+        return personList;
     }
 }

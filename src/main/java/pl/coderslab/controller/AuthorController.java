@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Person;
 import pl.coderslab.service.AuthorService;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class AuthorController {
         return "Wybrałes autora : "+author;
 
     }
+
     @RequestMapping("/deleteAuthor/{id}")
     @ResponseBody
     public String deleteAuthor(@PathVariable Long id) {
@@ -50,4 +52,14 @@ public class AuthorController {
         return "Autor usunięty : "+display;
 
     }
+
+    @RequestMapping("/getAllAuthor")
+    @ResponseBody
+    public String getAllAuthor() {
+        List<Author> authorList = authorService.readAllAuthorService();
+        return "Wszyscy autorzy : " + authorList;
+
+    }
+
+
 }

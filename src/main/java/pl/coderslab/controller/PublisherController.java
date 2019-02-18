@@ -5,8 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import pl.coderslab.model.Author;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.PublisherService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/publishers", produces = "text/html; charset=UTF-8")
@@ -43,6 +46,14 @@ public class PublisherController {
         Long display = id;
         publisherService.deletePublisherService(id);
         return "Wydawca usunięty : "+display;
+
+    }
+
+    @RequestMapping("/getAllPublisher")
+    @ResponseBody
+    public String getAllPublisher() {
+        List<Publisher> publisherList = publisherService.readAllPublisherService();
+        return "Wszyscy wydawcy : " + publisherList;
 
     }
 }

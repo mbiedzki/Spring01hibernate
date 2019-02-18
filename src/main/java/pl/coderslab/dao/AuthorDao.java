@@ -4,9 +4,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Component
 @Transactional
@@ -29,5 +32,11 @@ public class AuthorDao {
     public void delete(Author entity) {
         entityManager.remove(entityManager.contains(entity) ?
                 entity : entityManager.merge(entity));
+    }
+
+    public List<Author> findAll() {
+        Query query = entityManager.createQuery("SELECT author FROM Author author");
+        List<Author> authorList  = query.getResultList();
+        return authorList;
     }
 }

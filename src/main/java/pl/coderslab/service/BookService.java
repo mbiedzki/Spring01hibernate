@@ -4,7 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pl.coderslab.dao.BookDao;
+import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+
+import java.util.List;
 
 @Service
 public class BookService {
@@ -30,6 +33,11 @@ public class BookService {
     public void deleteBookService(Long id) {
         Book entity = findByIdService(id);
         bookDao.delete(entity);
+    }
+
+    public List<Book> readAllBookService() {
+        List<Book> bookList = bookDao.findAll();
+        return bookList;
     }
 
 }

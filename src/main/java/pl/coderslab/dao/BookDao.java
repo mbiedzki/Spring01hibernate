@@ -3,9 +3,12 @@ package pl.coderslab.dao;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 @Component
 @Transactional
@@ -30,5 +33,19 @@ public class BookDao {
         entityManager.remove(entityManager.contains(entity) ?
                 entity : entityManager.merge(entity));
     }
+
+    public List<Book> findAll() {
+        Query query = entityManager.createQuery("SELECT book FROM Book book");
+        List<Book> bookList  = query.getResultList();
+        return bookList;
+    }
+
+    public List<Book> getRatingList(int rating) {
+        Query query = entityManager.createQuery("SELECT book FROM Book book WHERE rating >:rating");
+        query.setParameter("rating", rating);
+        List<Book> bookList  = query.getResultList();
+        return bookList;
+    }
+
 
 }
