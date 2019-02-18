@@ -9,6 +9,9 @@ import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.service.AuthorService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 @RequestMapping(path="/authors", produces = "text/html; charset=UTF-8")
 public class AuthorController {
@@ -18,7 +21,8 @@ public class AuthorController {
     @RequestMapping(path = "/createAuthor")
     @ResponseBody
     public String createAuthor() {
-        Author author = new Author("Jan", "Kowalski");
+        List<Book> books = new ArrayList<>();
+        Author author = new Author("Jan", "Kowalski", books);
         authorService.saveAuthorService(author);
         return "Utworzono autora : " + author;
     }

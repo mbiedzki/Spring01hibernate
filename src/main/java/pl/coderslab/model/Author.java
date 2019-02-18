@@ -1,6 +1,8 @@
 package pl.coderslab.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="authors")
@@ -15,6 +17,14 @@ public class Author {
     @Column(nullable = false, length = 50)
     private String lastName;
 
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Book> books = new ArrayList<>();
+
+    public Author(String firstName, String lastName, List<Book> books) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.books = books;
+    }
 
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
@@ -48,12 +58,21 @@ public class Author {
         this.lastName = lastName;
     }
 
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", books=" + books +
                 '}';
     }
 }

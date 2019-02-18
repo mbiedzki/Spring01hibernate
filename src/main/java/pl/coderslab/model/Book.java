@@ -3,6 +3,8 @@ package pl.coderslab.model;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="books")
@@ -14,8 +16,8 @@ public class Book {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @Column(nullable = false, length = 75)
-    private String author;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Author> authors = new ArrayList<>();
 
     @Column(nullable = false, precision = 4, scale = 2)
     private Double rating;
@@ -26,24 +28,22 @@ public class Book {
     @Column(length = 1000)
     private String description;
 
-    public Book(String title, String author, Double rating, Publisher publisher, String description) {
+    public Book(String title, List<Author> authors, Double rating, Publisher publisher, String description) {
         this.title = title;
-        this.author = author;
+        this.authors = authors;
         this.rating = rating;
         this.publisher = publisher;
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", rating=" + rating +
-                ", publisher='" + publisher + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+    public Book(String title, Double rating, Publisher publisher, String description) {
+        this.title = title;
+        this.rating = rating;
+        this.publisher = publisher;
+        this.description = description;
+    }
+
+    public Book() {
     }
 
     public Long getId() {
@@ -62,12 +62,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public List<Author> getAuthor() {
+        return authors;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthor(List<Author> authors) {
+        this.authors = authors;
     }
 
     public Double getRating() {
@@ -94,6 +94,15 @@ public class Book {
         this.description = description;
     }
 
-    public Book() {
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", authors=" + authors +
+                ", rating=" + rating +
+                ", publisher=" + publisher +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

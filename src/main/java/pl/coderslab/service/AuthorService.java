@@ -3,9 +3,7 @@ package pl.coderslab.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.coderslab.dao.AuthorDao;
-import pl.coderslab.dao.BookDao;
 import pl.coderslab.model.Author;
-import pl.coderslab.model.Book;
 
 @Service
 public class AuthorService {
