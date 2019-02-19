@@ -17,7 +17,7 @@ public class Author {
     @Column(nullable = false, length = 50)
     private String lastName;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(mappedBy = "authors")
     private List<Book> books = new ArrayList<>();
 
     public Author(String firstName, String lastName, List<Book> books) {
@@ -72,7 +72,6 @@ public class Author {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", books=" + books +
                 '}';
     }
 }

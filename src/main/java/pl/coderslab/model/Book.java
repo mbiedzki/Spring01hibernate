@@ -16,7 +16,7 @@ public class Book {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     private List<Author> authors = new ArrayList<>();
 
     @Column(nullable = false, precision = 4, scale = 2)
@@ -99,7 +99,6 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", authors=" + authors +
                 ", rating=" + rating +
                 ", publisher=" + publisher +
                 ", description='" + description + '\'' +
