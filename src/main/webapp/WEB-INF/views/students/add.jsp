@@ -20,7 +20,8 @@
     </form:select> <br><br>
 
     <form:textarea path="notes"/><br><br>
-    Zgoda: <form:checkbox path="mailingList"/><br><br>
+    Zgoda na wysyłanie korespondencji :
+    <form:checkbox path="mailingList"/><br><br>
 
     <form:select path="programmingSkills" multiple="true">
         <form:option value="-" label="--Wybierz Umiejętności--"/>

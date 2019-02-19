@@ -22,7 +22,7 @@ public class Book {
     @Column(nullable = false, precision = 4, scale = 2)
     private Double rating;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     private Publisher publisher;
 
     @Column(length = 1000)

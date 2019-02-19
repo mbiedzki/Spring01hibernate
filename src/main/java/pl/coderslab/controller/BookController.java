@@ -2,13 +2,13 @@ package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.BookService;
+import pl.coderslab.service.PublisherService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +19,24 @@ import java.util.List;
 public class BookController {
     @Autowired
     private BookService bookService;
+    @Autowired
+    private PublisherService publisherService;
 
-    @RequestMapping(path = "/createBook")
+    @ModelAttribute("publishers")
+    public List<Publisher> getPublishers() {
+        return publisherService.readAllPublisherService();
+    }
+
+    @PostMapping(path = "/add")
     @ResponseBody
-    public String createBook() {
-        Publisher publisher = new Publisher("Helios");
+    public String createBook(@ModelAttribute Book book) {
+        /*Publisher publisher = new Publisher("Helios");
         List<Author> authors = new ArrayList<>();
         authors.add(new Author("Jan", "Kowalski"));
         Book book = new Book("Java", authors, 9.20, publisher, "fajna książka");
+        bookService.saveBookService(book);*/
         bookService.saveBookService(book);
-        return "Utworzono książkę : " + book;
+        return "Zapisano książkę : " + book;
     }
 
     @RequestMapping(path = "/changeBook/{id}")
@@ -62,5 +70,13 @@ public class BookController {
         return "Wszystkie książki : " + bookList;
 
     }
+
+    @GetMapping("/add")
+    public String add(Model model) {
+        model.addAttribute("book", new Book());
+        return "books/add";
+    }
+
+
 
 }
