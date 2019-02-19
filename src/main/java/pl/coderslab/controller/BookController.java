@@ -27,54 +27,62 @@ public class BookController {
         return publisherService.readAllPublisherService();
     }
 
+    //add
     @PostMapping(path = "/add")
-    @ResponseBody
-    public String createBook(@ModelAttribute Book book) {
-        /*Publisher publisher = new Publisher("Helios");
-        List<Author> authors = new ArrayList<>();
-        authors.add(new Author("Jan", "Kowalski"));
-        Book book = new Book("Java", authors, 9.20, publisher, "fajna książka");
-        bookService.saveBookService(book);*/
+    public String add(@ModelAttribute Book book) {
         bookService.saveBookService(book);
-        return "Zapisano książkę : " + book;
-    }
-
-    @RequestMapping(path = "/changeBook/{id}")
-    @ResponseBody
-    public String changeBook(@PathVariable Long id) {
-        Long display = id;
-        bookService.editBookService(id);
-        return "Książka została zedytowana : "+display;
-    }
-
-    @RequestMapping("/getBook/{id}")
-    @ResponseBody
-    public String getBook(@PathVariable Long id) {
-        Book book = bookService.findByIdService(id);
-        return "Wybrałes ksiażke :"+book;
-
-    }
-    @RequestMapping("/deleteBook/{id}")
-    @ResponseBody
-    public String deleteBook(@PathVariable Long id) {
-        Long display = id;
-        bookService.deleteBookService(id);
-        return "Książka usunięta : "+display;
-
-    }
-
-    @RequestMapping("/getAllBook")
-    @ResponseBody
-    public String getAllBook() {
-        List<Book> bookList = bookService.readAllBookService();
-        return "Wszystkie książki : " + bookList;
-
+        return "redirect:/books/all";
     }
 
     @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("book", new Book());
         return "books/add";
+    }
+
+
+    //edit
+    @GetMapping(path="/edit/{id}")
+    public String forEdit(Model model, @PathVariable Long id) {
+        model.addAttribute("book", bookService.findByIdService(id));
+        return "books/edit";
+    }
+
+    @PostMapping(path = "/edit/{id}")
+    public String save(@ModelAttribute Book book) {
+        bookService.editBookService(book);
+        return "redirect:/books/all";
+    }
+
+    //get by id
+    @RequestMapping("/get/{id}")
+    @ResponseBody
+    public String get(@PathVariable Long id) {
+        Book book = bookService.findByIdService(id);
+        return "Wybrałes ksiażke :"+book;
+
+    }
+
+    //delete
+    @RequestMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        bookService.deleteBookService(id);
+        return "redirect:/books/all";
+
+    }
+
+    /*@RequestMapping("/getAll")
+    @ResponseBody
+    public String getAll() {
+        List<Book> bookList = bookService.readAllBookService();
+        return "Wszystkie książki : " + bookList;
+
+    }*/
+
+    @RequestMapping("/all")
+    public String all(Model model) {
+        model.addAttribute("books", bookService.readAllBookService());
+        return "books/all";
     }
 
 

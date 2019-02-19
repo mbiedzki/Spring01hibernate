@@ -17,9 +17,8 @@ public class PublisherController {
     @Autowired
     private PublisherService publisherService;
 
-    @RequestMapping(path = "/createPublisher")
-    @ResponseBody
-    public String createPublisher() {
+    @RequestMapping(path = "/add")
+    public String add() {
         Publisher publisher = new Publisher("Iskry");
         publisherService.savePublisherService(publisher);
         return "Utworzono wydawcę : " + publisher;

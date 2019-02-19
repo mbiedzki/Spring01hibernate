@@ -2,9 +2,8 @@ package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Person;
@@ -27,6 +26,21 @@ public class AuthorController {
         authorService.saveAuthorService(author);
         return "Utworzono autora : " + author;
     }
+
+    //add
+
+    @GetMapping("/add")
+    public String add(Model model) {
+        model.addAttribute("author", new Author());
+        return "authors/add";
+    }
+
+    @PostMapping(path = "/add")
+    public String add(@ModelAttribute Author author) {
+        authorService.saveAuthorService(author);
+        return "redirect:/authors/all";
+    }
+
 
     @RequestMapping(path = "/changeAuthor/{id}")
     @ResponseBody
@@ -53,13 +67,13 @@ public class AuthorController {
 
     }
 
-    @RequestMapping("/getAllAuthor")
-    @ResponseBody
-    public String getAllAuthor() {
-        List<Author> authorList = authorService.readAllAuthorService();
-        return "Wszyscy autorzy : " + authorList;
+    @RequestMapping("/all")
+    public String getAllAuthor(Model model) {
+        model.addAttribute("authors", authorService.readAllAuthorService());
+        return "authors/all";
 
     }
+
 
 
 }

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -5,8 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-
-<h1>Dodaj ksiazke</h1>
+<h1>Edycja książki</h1>
 
 <form:form method="post" modelAttribute="book">
     Tytuł: <form:input path="title"/> <br><br>
