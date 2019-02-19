@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
 import pl.coderslab.service.PublisherService;
 
@@ -21,10 +22,17 @@ public class BookController {
     private BookService bookService;
     @Autowired
     private PublisherService publisherService;
+    @Autowired
+    private AuthorService authorService;
 
     @ModelAttribute("publishers")
     public List<Publisher> getPublishers() {
         return publisherService.readAllPublisherService();
+    }
+
+    @ModelAttribute("authors")
+    public List<Author> getAuthors() {
+        return authorService.readAllAuthorService();
     }
 
     //add

@@ -23,11 +23,7 @@ public class AuthorService {
         return authorDao.findById(id);
     }
 
-    public void editAuthorService(Long id) {
-        Author author = findAuthorByIdService(id);
-        String oldLastName = author.getLastName();
-        String newLastName = "edited"+oldLastName;
-        author.setLastName(newLastName);
+    public void editAuthorService(Author author) {
         authorDao.update(author);
     }
 

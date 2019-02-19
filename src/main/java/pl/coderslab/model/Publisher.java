@@ -14,12 +14,12 @@ public class Publisher {
     @Column(nullable = false, length = 100)
     private String name;
 
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH}, mappedBy = "publisher")
+    private List<Book> books = new ArrayList<>();
+
     public Publisher(String name) {
         this.name = name;
     }
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "publisher")
-    private List<Book> books = new ArrayList<>();
 
     public Publisher() {
     }

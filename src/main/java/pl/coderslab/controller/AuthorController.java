@@ -22,13 +22,12 @@ public class AuthorController {
     @ResponseBody
     public String createAuthor() {
         List<Book> books = new ArrayList<>();
-        Author author = new Author("Jan", "Kowalski", books);
+        Author author = new Author("Jan", "Kowalski");
         authorService.saveAuthorService(author);
         return "Utworzono autora : " + author;
     }
 
     //add
-
     @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("author", new Author());
@@ -41,14 +40,35 @@ public class AuthorController {
         return "redirect:/authors/all";
     }
 
+    //edit
+    @GetMapping("/edit/{id}")
+    public String edit(Model model, @PathVariable Long id) {
+        model.addAttribute("author", authorService.findAuthorByIdService(id));
+        return "authors/edit";
+    }
 
-    @RequestMapping(path = "/changeAuthor/{id}")
+    @PostMapping(path = "/edit/{id}")
+    public String edit(@ModelAttribute Author author) {
+        authorService.editAuthorService(author);
+        return "redirect:/authors/all";
+    }
+
+    //delete
+    @RequestMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        authorService.deleteAuthorService(id);
+        return "redirect:/authors/all";
+
+    }
+
+
+    /*@RequestMapping(path = "/changeAuthor/{id}")
     @ResponseBody
     public String changeAuthor(@PathVariable Long id) {
         Long display = id;
         authorService.editAuthorService(id);
         return "Autor został zedytowany : "+display;
-    }
+    }*/
 
     @RequestMapping("/getAuthor/{id}")
     @ResponseBody

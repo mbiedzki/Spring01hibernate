@@ -16,7 +16,7 @@ public class Book {
     @Column(nullable = false, length = 100)
     private String title;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
     private List<Author> authors = new ArrayList<>();
 
     @Column(nullable = false, precision = 4, scale = 2)

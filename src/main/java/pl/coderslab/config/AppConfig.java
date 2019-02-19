@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import pl.coderslab.converter.AuthorConverter;
 import pl.coderslab.converter.PublisherConverter;
 import pl.coderslab.model.Publisher;
 
@@ -51,10 +52,17 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(getPublisherConverter());
+        registry.addConverter(getAuthorConverter());
     }
+
     @Bean
     public PublisherConverter getPublisherConverter() {
         return new PublisherConverter();
+    }
+
+    @Bean
+    public AuthorConverter getAuthorConverter() {
+        return new AuthorConverter();
     }
 
 }

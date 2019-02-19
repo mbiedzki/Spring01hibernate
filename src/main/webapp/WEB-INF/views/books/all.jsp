@@ -34,5 +34,7 @@
 </table>
 
 <a href="/books/add">Dodaj książkę</a>
+<br><br>
+<a href="/">Powrót do strony głównej</a>
 </body>
 </html>

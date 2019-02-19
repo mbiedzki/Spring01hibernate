@@ -23,11 +23,7 @@ public class PublisherService {
         return publisherDao.findById(id);
     }
 
-    public void editPublisherService(Long id) {
-        Publisher publisher = findPublisherByIdService(id);
-        String oldName = publisher.getName();
-        String newName = "edited"+oldName;
-        publisher.setName(newName);
+    public void editPublisherService(Publisher publisher) {
         publisherDao.update(publisher);
     }
 

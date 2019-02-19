@@ -20,12 +20,6 @@ public class Author {
     @ManyToMany(mappedBy = "authors")
     private List<Book> books = new ArrayList<>();
 
-    public Author(String firstName, String lastName, List<Book> books) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.books = books;
-    }
-
     public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,6 +59,9 @@ public class Author {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+    public String getFullName() {
+        return lastName+" "+firstName; }
 
     @Override
     public String toString() {

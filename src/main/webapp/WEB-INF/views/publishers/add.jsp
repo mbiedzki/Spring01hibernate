@@ -5,15 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Dodawanie Autora</h1>
+<h1>Dodawanie Wydawcy</h1>
 
-<form:form method="post" modelAttribute="author">
+<form:form method="post" modelAttribute="publisher">
 
-    Imie autora: <form:input path="firstName"/><br><br>
-    Nazwisko autora: <form:input path="lastName"/><br><br>
+    Nazwa wydawnictwa: <form:input path="name"/><br><br>
 
     <input type="submit" value="Wyślij">
-
 
 </form:form>
 </body>
