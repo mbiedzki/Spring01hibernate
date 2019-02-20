@@ -1,5 +1,9 @@
 package pl.coderslab.model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.pl.PESEL;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +16,18 @@ public class Author {
     private Long id;
 
     @Column(nullable = false, length = 50)
+    @NotBlank
     private String firstName;
 
     @Column(nullable = false, length = 50)
+    @NotBlank
     private String lastName;
+
+    @PESEL
+    private String pesel;
+
+    @Email
+    private String email;
 
     @ManyToMany(mappedBy = "authors")
     private List<Book> books = new ArrayList<>();
@@ -62,6 +74,22 @@ public class Author {
 
     public String getFullName() {
         return lastName+" "+firstName; }
+
+    public String getPesel() {
+        return pesel;
+    }
+
+    public void setPesel(String pesel) {
+        this.pesel = pesel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public String toString() {

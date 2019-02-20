@@ -13,13 +13,14 @@
     Tytuł: <form:input path="title"/> <br><br>
     Rating: <form:input path="rating"/> <br><br>
     Opis: <form:textarea path="description"/> <br><br>
+    Liczba stron: <form:input path="pages"/> <br><br>
 
     Wydawca: <form:select path="publisher">
     <form:option value="0" label="--Wybierz wydawce--"/>
     <form:options items="${publishers}" itemLabel="name" itemValue="id"/>
     </form:select><br><br>
 
-    Autor: <form:select path="author" multiple="true">
+    Autor: <form:select path="authors" multiple="true">
     <form:option value="0" label="--Wybierz autorów--"/>
     <form:options items="${authors}" itemLabel="FullName" itemValue="id"/>
     </form:select><br><br>
