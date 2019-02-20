@@ -1,8 +1,14 @@
 package pl.coderslab.model;
 
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,19 +20,30 @@ public class Book {
     private Long id;
 
     @Column(nullable = false, length = 100)
+    @NotBlank
+    @Size(min = 5, max = 100)
     private String title;
 
     @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
+    @NotEmpty
     private List<Author> authors = new ArrayList<>();
 
     @Column(nullable = false, precision = 4, scale = 2)
+    @NotNull(message="rating nie może być pusty")
+    @Min(1)
+    @Max(10)
     private Double rating;
 
     @ManyToOne()
+    @NotNull
     private Publisher publisher;
 
-    @Column(length = 1000)
+    @Column(length = 600)
+    @Size(max = 600)
     private String description;
+
+    @Min(1)
+    private int pages;
 
     public Book(String title, List<Author> authors, Double rating, Publisher publisher, String description) {
         this.title = title;
@@ -92,6 +109,14 @@ public class Book {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
     }
 
     @Override
