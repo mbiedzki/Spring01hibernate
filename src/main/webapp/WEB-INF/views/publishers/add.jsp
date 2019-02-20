@@ -10,9 +10,14 @@
 <form:form method="post" modelAttribute="publisher">
 
     Nazwa wydawnictwa: <form:input path="name"/><br><br>
+    NIP: <form:input path="nip"/><br><br>
+    REGON: <form:input path="regon"/><br><br>
 
     <input type="submit" value="Wyślij">
 
 </form:form>
+
+<br><br>
+<a href="/">Powrót do strony głównej</a>
 </body>
 </html>

@@ -28,5 +28,8 @@
 
 </form:form>
 
+<br><br>
+<a href="/">Powrót do strony głównej</a>
+
 </body>
 </html>

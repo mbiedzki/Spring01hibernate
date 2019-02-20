@@ -29,7 +29,7 @@ public class Author {
     @Email
     private String email;
 
-    @ManyToMany(mappedBy = "authors")
+    @ManyToMany(mappedBy = "authors", fetch = FetchType.EAGER)
     private List<Book> books = new ArrayList<>();
 
     public Author(String firstName, String lastName) {

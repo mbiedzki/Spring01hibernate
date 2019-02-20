@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Title</title>
+
 </head>
 <body>
 <h1>Lista książek</h1>
@@ -15,6 +16,7 @@
         <td>rating</td>
         <td>wydawca</td>
         <td>nr wydawcy</td>
+        <td>książki</td>
     </tr>
     </thead>
     <tbody>
@@ -25,6 +27,14 @@
             <td>${book.rating}</td>
             <td>${book.publisher.name}</td>
             <td>${book.publisher.id}</td>
+
+            <td>
+                <c:forEach items="${book.authors}" var="author">
+                    ${author.fullName} ,
+                </c:forEach>
+
+            </td>
+
             <td><a href="/books/edit/${book.id}">Edytuj książkę</a></td>
             <td><a href="/books/delete/${book.id}" onclick="return confirm
             ('Jesteś pewny, że chcesz usunąć ?')">Usuń książkę</a></td>

@@ -25,7 +25,7 @@ public class Publisher {
     @REGON
     private String regon;
 
-    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.DETACH}, mappedBy = "publisher")
+    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.DETACH}, mappedBy = "publisher", fetch = FetchType.EAGER)
     private List<Book> books = new ArrayList<>();
 
     public Publisher(String name) {
@@ -65,6 +65,14 @@ public class Publisher {
 
     public void setRegon(String regon) {
         this.regon = regon;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 
     @Override

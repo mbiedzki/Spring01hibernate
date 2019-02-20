@@ -12,6 +12,7 @@
         <td>id</td>
         <td>imię</td>
         <td>nazwisko</td>
+        <td>książki</td>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +21,13 @@
             <td>${author.id}</td>
             <td>${author.firstName}</td>
             <td>${author.lastName}</td>
+
+            <td>
+            <c:forEach items="${author.books}" var="book">
+                ${book.title} ,
+            </c:forEach>
+            </td>
+
             <td><a href="/authors/edit/${author.id}">Edytuj autora</a></td>
             <td><a href="/authors/delete/${author.id}" onclick="return confirm
             ('Jesteś pewny, że chcesz usunąć ?')">Usuń autora</a></td>

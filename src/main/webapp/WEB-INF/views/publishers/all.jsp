@@ -11,6 +11,7 @@
     <tr>
         <td>id</td>
         <td>nazwa</td>
+        <td>książki</td>
     </tr>
     </thead>
     <tbody>
@@ -18,6 +19,14 @@
         <tr>
             <td>${publisher.id}</td>
             <td>${publisher.name}</td>
+
+            <td>
+                <c:forEach items="${publisher.books}" var="book">
+                    ${book.title} ,
+                </c:forEach>
+            </td>
+
+
             <td><a href="/publishers/edit/${publisher.id}">Edytuj wydawcę</a></td>
             <td><a href="/publishers/delete/${publisher.id}" onclick="return confirm
             ('Jesteś pewny, że chcesz usunąć ?')">Usuń wydawcę</a></td>

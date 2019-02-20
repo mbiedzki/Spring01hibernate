@@ -3,6 +3,7 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
@@ -11,6 +12,7 @@ import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
 import pl.coderslab.service.PublisherService;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,16 +38,21 @@ public class BookController {
     }
 
     //add
-    @PostMapping(path = "/add")
-    public String add(@ModelAttribute Book book) {
-        bookService.saveBookService(book);
-        return "redirect:/books/all";
-    }
 
     @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("book", new Book());
         return "books/add";
+    }
+
+    @PostMapping(path = "/add")
+    public String add(@Valid Book book, BindingResult result) {
+        if(result.hasErrors()) {
+            return "books/add";
+        }
+
+        bookService.saveBookService(book);
+        return "redirect:/books/all";
     }
 
 
