@@ -14,6 +14,11 @@
 <body>
 <h1>Kategorie</h1>
 
+
+<c:if test="${deleteError==true}">
+    <span style="color: red;">Nie można usunąć kategorii, są do niej przypisane książki</span>
+</c:if>
+
 <table border="1">
     <thead>
     <tr>
@@ -21,6 +26,9 @@
     </tr>
     </thead>
     <tbody>
+
+
+
     <c:forEach items="${categories}" var="category">
         <tr>
             <td>

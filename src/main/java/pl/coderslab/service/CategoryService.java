@@ -17,6 +17,8 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private BookRepository bookRepository;
 
     public Category findByIdService(Long id) {
         return categoryRepository.findOne(id);
@@ -33,6 +35,17 @@ public class CategoryService {
     public void deleteCategoryService(Long id) {
         categoryRepository.delete(id);
     }
+
+    public boolean noBooksInCategory(Long id) {
+        Category category = categoryRepository.findOne(id);
+        List<Book> books = bookRepository.findBookByCategory(category);
+        if (!books.isEmpty()) {
+            return false;
+        } else {
+        return true;
+    }
+    }
+
 
     public List<Category> readAllCategoryService() {
         return categoryRepository.findAll();

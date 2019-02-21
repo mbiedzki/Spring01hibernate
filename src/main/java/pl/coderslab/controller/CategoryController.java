@@ -5,10 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Category;
 import pl.coderslab.model.Publisher;
@@ -17,13 +14,19 @@ import pl.coderslab.service.CategoryService;
 import pl.coderslab.validator.ValidationProposition;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
-@RequestMapping(path="/categories", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/categories", produces = "text/html; charset=UTF-8")
 public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
+
+    @ModelAttribute("categories")
+    public List<Category> getCategory() {
+        return categoryService.readAllCategoryService();
+    }
 
     //add
 
@@ -53,7 +56,7 @@ public class CategoryController {
 
     @PostMapping(path = "/edit/{id}")
     public String edit(@Valid Category category, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "categories/addEdit";
         }
         categoryService.editCategoryService(category);
@@ -62,9 +65,14 @@ public class CategoryController {
 
     //delete
     @RequestMapping("/delete/{id}")
-    public String delete(@PathVariable Long id) {
-        categoryService.deleteCategoryService(id);
-        return "redirect:/categories/all";
+    public String delete(@PathVariable Long id, Model model) {
+        if (categoryService.noBooksInCategory(id)) {
+            categoryService.deleteCategoryService(id);
+            return "redirect:/categories/all";
+        } else {
+            model.addAttribute("deleteError", true);
+            return "/categories/all";
+        }
     }
 
     @RequestMapping("/all")
