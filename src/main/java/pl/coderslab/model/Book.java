@@ -50,6 +50,9 @@ public class Book {
     @ColumnDefault("0")
     private boolean proposition;
 
+    @OneToOne
+    private Category category;
+
 
     public Book(String title, List<Author> authors, Double rating, Publisher publisher, String description) {
         this.title = title;
@@ -131,6 +134,14 @@ public class Book {
 
     public void setProposition(boolean proposition) {
         this.proposition = proposition;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Override

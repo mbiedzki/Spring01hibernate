@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.dao.PublisherDao;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.repository.PublisherRepository;
 
 import java.util.List;
 
@@ -14,26 +15,27 @@ import java.util.List;
 public class PublisherService {
     @Autowired
     private PublisherDao publisherDao;
+    @Autowired
+    private PublisherRepository publisherRepository;
 
     public void savePublisherService(Publisher entity) {
-        publisherDao.savePublisher(entity);
+        publisherRepository.save(entity);
     }
 
     public Publisher findPublisherByIdService(Long id) {
-        return publisherDao.findById(id);
+        return publisherRepository.findOne(id);
     }
 
     public void editPublisherService(Publisher publisher) {
-        publisherDao.update(publisher);
+        publisherRepository.save(publisher);
     }
 
     public void deletePublisherService(Long id) {
-        Publisher entity = findPublisherByIdService(id);
-        publisherDao.delete(entity);
+        publisherRepository.delete(id);
     }
 
     public List<Publisher> readAllPublisherService() {
-        List<Publisher> publisherList = publisherDao.findAll();
-        return publisherList;
+        return publisherRepository.findAll();
+        //return publisherRepository.findPublisherByRegon("280034594");
     }
 }

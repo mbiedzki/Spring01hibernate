@@ -16,6 +16,7 @@
         <td>rating</td>
         <td>wydawca</td>
         <td>nr wydawcy</td>
+        <td>kategoria</td>
         <td>książki</td>
     </tr>
     </thead>
@@ -27,6 +28,7 @@
             <td>${book.rating}</td>
             <td>${book.publisher.name}</td>
             <td>${book.publisher.id}</td>
+            <td>${book.category.name}</td>
 
             <td>
                 <c:forEach items="${book.authors}" var="author">

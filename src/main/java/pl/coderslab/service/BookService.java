@@ -7,35 +7,40 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.dao.BookDao;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+import pl.coderslab.repository.BookRepository;
+import pl.coderslab.repository.CategoryRepository;
 
 import java.util.List;
 
 @Service
 @Transactional
 public class BookService {
+    /*@Autowired
+    private BookDao bookDao;*/
     @Autowired
-    private BookDao bookDao;
+    private BookRepository bookRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     public void saveBookService(Book entity) {
-        bookDao.saveBook(entity);
+        bookRepository.save(entity);
     }
 
     public Book findByIdService(Long id) {
-        return bookDao.findById(id);
+        return bookRepository.findOne(id);
     }
 
     public void editBookService(Book book) {
-        bookDao.update(book);
+        bookRepository.save(book);
     }
 
     public void deleteBookService(Long id) {
-        Book entity = findByIdService(id);
-        bookDao.delete(entity);
+        bookRepository.delete(id);
     }
 
     public List<Book> readAllBookService() {
-        List<Book> bookList = bookDao.findAll();
-        return bookList;
+        //return bookRepository.findFirstByCategoryOrderByTitle(categoryRepository.findOne(1L));
+        return bookRepository.findAll();
     }
 
 }
