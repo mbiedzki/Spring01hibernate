@@ -30,7 +30,7 @@
 
             <td>
                 <c:forEach items="${book.authors}" var="author">
-                    ${author.fullName} ,
+                    ${author.fullName} <br>
                 </c:forEach>
 
             </td>

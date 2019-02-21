@@ -3,8 +3,10 @@ package pl.coderslab.model;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.pl.PESEL;
+import pl.coderslab.validator.Mature;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +30,10 @@ public class Author {
 
     @Email
     private String email;
+
+    @Column(name="year_of_birth", length = 4)
+    @Mature
+    private int yearOfBirth;
 
     @ManyToMany(mappedBy = "authors", fetch = FetchType.EAGER)
     private List<Book> books = new ArrayList<>();
@@ -89,6 +95,14 @@ public class Author {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
     @Override

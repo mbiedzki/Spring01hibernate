@@ -1,11 +1,13 @@
 package pl.coderslab.model;
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.stereotype.Component;
+import pl.coderslab.validator.ValidationBook;
+import pl.coderslab.validator.ValidationProposition;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import javax.validation.groups.Default;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,31 +18,38 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100)
-    @NotBlank
+    @Column(length = 100)
+    @NotBlank(groups={ValidationBook.class, ValidationProposition.class})
     @Size(min = 5, max = 100)
     private String title;
 
     @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
-    @NotEmpty
     private List<Author> authors = new ArrayList<>();
 
-    @Column(nullable = false, precision = 4, scale = 2)
-    @NotNull(message="rating nie może być pusty")
+    @Column(precision = 4, scale = 2)
+    @NotNull(groups={ValidationBook.class})
     @Min(1)
     @Max(10)
+    @ColumnDefault("1")
     private Double rating;
 
+    @ColumnDefault("0")
     @ManyToOne()
-    @NotNull
     private Publisher publisher;
 
     @Column(length = 600)
     @Size(max = 600)
+    @NotBlank(groups={ValidationProposition.class})
     private String description;
 
-    @Min(1)
+
+    @Min(value = 1, groups = {ValidationBook.class})
+    @ColumnDefault("1")
     private int pages;
+
+    @ColumnDefault("0")
+    private boolean proposition;
+
 
     public Book(String title, List<Author> authors, Double rating, Publisher publisher, String description) {
         this.title = title;
@@ -114,6 +123,14 @@ public class Book {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public boolean isProposition() {
+        return proposition;
+    }
+
+    public void setProposition(boolean proposition) {
+        this.proposition = proposition;
     }
 
     @Override

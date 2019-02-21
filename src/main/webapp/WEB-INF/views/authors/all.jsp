@@ -24,7 +24,7 @@
 
             <td>
             <c:forEach items="${author.books}" var="book">
-                ${book.title} ,
+                ${book.title} <br>
             </c:forEach>
             </td>
 

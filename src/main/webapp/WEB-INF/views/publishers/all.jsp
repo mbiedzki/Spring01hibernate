@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -20,9 +21,9 @@
             <td>${publisher.id}</td>
             <td>${publisher.name}</td>
 
-            <td>
+          <td>
                 <c:forEach items="${publisher.books}" var="book">
-                    ${book.title} ,
+                    ${book.title} <br>
                 </c:forEach>
             </td>
 

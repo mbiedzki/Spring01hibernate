@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
@@ -11,6 +12,8 @@ import pl.coderslab.model.Publisher;
 import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
 import pl.coderslab.service.PublisherService;
+import pl.coderslab.validator.ValidationBook;
+import pl.coderslab.validator.ValidationProposition;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -46,7 +49,7 @@ public class BookController {
     }
 
     @PostMapping(path = "/add")
-    public String add(@Valid Book book, BindingResult result) {
+    public String add(@Validated({ValidationBook.class}) Book book, BindingResult result) {
         if(result.hasErrors()) {
             return "books/add";
         }
@@ -64,7 +67,10 @@ public class BookController {
     }
 
     @PostMapping(path = "/edit/{id}")
-    public String save(@ModelAttribute Book book) {
+    public String save(@Validated({ValidationBook.class}) Book book, BindingResult result) {
+        if(result.hasErrors()) {
+            return "books/edit";
+        }
         bookService.editBookService(book);
         return "redirect:/books/all";
     }
@@ -99,6 +105,10 @@ public class BookController {
         model.addAttribute("books", bookService.readAllBookService());
         return "books/all";
     }
+
+
+
+
 
 
 

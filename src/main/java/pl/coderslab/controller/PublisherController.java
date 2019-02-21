@@ -3,11 +3,13 @@ package pl.coderslab.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.PublisherService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -24,7 +26,10 @@ public class PublisherController {
     }
 
     @PostMapping(path = "/add")
-    public String add(@ModelAttribute Publisher publisher) {
+    public String add(@Valid Publisher publisher, BindingResult result) {
+        if(result.hasErrors()) {
+            return "publishers/add";
+        }
         publisherService.savePublisherService(publisher);
         return "redirect:/publishers/all";
     }
@@ -37,7 +42,10 @@ public class PublisherController {
     }
 
     @PostMapping(path = "/edit/{id}")
-    public String edit(@ModelAttribute Publisher publisher) {
+    public String edit(@Valid Publisher publisher, BindingResult result) {
+        if(result.hasErrors()) {
+            return "publishers/edit";
+        }
         publisherService.editPublisherService(publisher);
         return "redirect:/publishers/all";
     }
