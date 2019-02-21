@@ -1,6 +1,7 @@
 package pl.coderslab.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,6 +11,8 @@ import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.model.Category;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.repository.BookRepo;
+import pl.coderslab.repository.BookRepository;
 import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
 import pl.coderslab.service.CategoryService;
@@ -116,10 +119,13 @@ public class BookController {
         return "books/all";
     }
 
+    //set rating
+    @GetMapping(path="/setRating")
+    public String setRating(@RequestParam Double rating) {
+        bookService.setRating(rating);
+        return "redirect: /books/all";
 
-
-
-
+    }
 
 
 }

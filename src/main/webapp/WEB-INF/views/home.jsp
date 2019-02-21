@@ -21,5 +21,11 @@
 <a href="books/all" >Książki</a><br><br>
 <a href="propositions/add" >Dodawanie propozycji</a><br><br>
 
+<form action="/books/setRating" method="get">
+    <input type="number" name="rating">
+    <input type="submit" value="rating dla wszystkich">
+    </form>
+
+
 </body>
 </html>

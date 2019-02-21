@@ -9,6 +9,7 @@ import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
 import pl.coderslab.repository.BookRepository;
 import pl.coderslab.repository.CategoryRepository;
+import pl.coderslab.repository.PublisherRepository;
 
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class BookService {
     private BookRepository bookRepository;
     @Autowired
     private CategoryRepository categoryRepository;
+    @Autowired
+    private PublisherRepository publisherRepository;
 
     public void saveBookService(Book entity) {
         bookRepository.save(entity);
@@ -38,9 +41,25 @@ public class BookService {
         bookRepository.delete(id);
     }
 
+    public void setRating(Double rating) {bookRepository.setRating(rating);}
+
     public List<Book> readAllBookService() {
-        //return bookRepository.findFirstByCategoryOrderByTitle(categoryRepository.findOne(1L));
         return bookRepository.findAll();
+
+        //testujemy metody z BookRepository
+        //return bookRepository.findFirstByCategoryOrderByTitle(categoryRepository.findOne(1L));
+
+        //własne query zdefiniowane w BookRepository
+        //return bookRepository.findBookByCategoryIdByQuery(categoryRepository.findOne(1L));
+
+        //testujemy rating range
+        //return bookRepository.findBookByRatingRange();
+
+        //testujemy by publisher
+        //return bookRepository.findBookByPublisherByQuery(publisherRepository.findOne(1L));
+
+        //testujemy by category sorted by title first
+        //return bookRepository.findFirstBookByCategorySorted(1L);
     }
 
 }
