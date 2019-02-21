@@ -1,6 +1,8 @@
 package pl.coderslab.model;
 
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class Category {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "wpisz nazwę kategorii")
     private String name;
 
     public Long getId() {

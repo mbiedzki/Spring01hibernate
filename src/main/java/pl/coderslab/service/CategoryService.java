@@ -26,11 +26,15 @@ public class CategoryService {
         categoryRepository.save(category);
     }
 
+    public void saveCategoryService(Category category) {
+        categoryRepository.save(category);
+    }
+
     public void deleteCategoryService(Long id) {
         categoryRepository.delete(id);
     }
 
-    public List<Category> readAllCategoryervice() {
+    public List<Category> readAllCategoryService() {
         return categoryRepository.findAll();
     }
 

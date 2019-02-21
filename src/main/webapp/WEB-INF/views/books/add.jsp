@@ -34,6 +34,12 @@
     </form:select><br><br>
     <form:errors path="publisher" cssClass="error" element="div"/>
 
+    Kategoria: <form:select path="category">
+    <form:option value="0" label="--Wybierz kategorię--"/>
+    <form:options items="${categories}" itemLabel="name" itemValue="id"/>
+    </form:select><br><br>
+    <form:errors path="category" cssClass="error" element="div"/>
+
     Autor: <form:select path="authors" multiple="true">
     <form:option value="0" label="--Wybierz autorów--"/>
     <form:options items="${authors}" itemLabel="FullName" itemValue="id"/>

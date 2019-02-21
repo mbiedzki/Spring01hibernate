@@ -17,6 +17,7 @@
         <td>wydawca</td>
         <td>nr wydawcy</td>
         <td>kategoria</td>
+        <td>status</td>
         <td>książki</td>
     </tr>
     </thead>
@@ -29,7 +30,16 @@
             <td>${book.publisher.name}</td>
             <td>${book.publisher.id}</td>
             <td>${book.category.name}</td>
-
+            <td>
+                <c:choose>
+                    <c:when test="${book.proposition==true}">
+                        propozycja
+                    </c:when>
+                    <c:otherwise>
+                        książka
+                    </c:otherwise>
+                </c:choose>
+            </td>
             <td>
                 <c:forEach items="${book.authors}" var="author">
                     ${author.fullName} <br>

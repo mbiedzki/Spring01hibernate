@@ -15,6 +15,9 @@
 
 <a href="publishers/all" >Wydawcy</a><br><br>
 <a href="authors/all" >Autorzy</a><br><br>
+<a href="categories/all" >Kategorie</a><br><br>
+
+
 <a href="books/all" >Książki</a><br><br>
 <a href="propositions/add" >Dodawanie propozycji</a><br><br>
 

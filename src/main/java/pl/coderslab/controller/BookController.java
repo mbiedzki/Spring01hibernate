@@ -8,9 +8,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.model.Author;
 import pl.coderslab.model.Book;
+import pl.coderslab.model.Category;
 import pl.coderslab.model.Publisher;
 import pl.coderslab.service.AuthorService;
 import pl.coderslab.service.BookService;
+import pl.coderslab.service.CategoryService;
 import pl.coderslab.service.PublisherService;
 import pl.coderslab.validator.ValidationBook;
 import pl.coderslab.validator.ValidationProposition;
@@ -29,6 +31,9 @@ public class BookController {
     private PublisherService publisherService;
     @Autowired
     private AuthorService authorService;
+    @Autowired
+    private CategoryService categoryService;
+
 
     @ModelAttribute("publishers")
     public List<Publisher> getPublishers() {
@@ -38,6 +43,11 @@ public class BookController {
     @ModelAttribute("authors")
     public List<Author> getAuthors() {
         return authorService.readAllAuthorService();
+    }
+
+    @ModelAttribute("categories")
+    public List<Category> getCategory() {
+        return categoryService.readAllCategoryService();
     }
 
     //add

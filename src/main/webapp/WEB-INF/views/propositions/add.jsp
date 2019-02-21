@@ -22,7 +22,7 @@
     Opis: <form:textarea path="description"/> <br><br>
     <form:errors path="description" cssClass="error" element="div"/>
 
-    <%--<form:hidden path="proposition" value="true" />--%>
+    <form:hidden path="proposition" value="true" />
 
     <input type="submit" value="Wyślij">
 
