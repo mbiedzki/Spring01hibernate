@@ -13,7 +13,7 @@ public class Category {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "wpisz nazwę kategorii")
+    @NotBlank()
     private String name;
 
     public Long getId() {
@@ -30,5 +30,13 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

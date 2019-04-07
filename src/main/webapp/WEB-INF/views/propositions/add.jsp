@@ -18,15 +18,16 @@
 </div>
 <hr>
 
-<div class="w3-container w3-xlarge">
+<div class="w3-container w3-large">
 <form:form method="post" modelAttribute="book">
 
-    <span style='width: 8em; display: inline-block'>Title : </span> <form:input cssStyle="width: 19em" path="title"/> <br>
-    <form:errors path="title" cssClass="error" element="div"/><br>
+    <span style='width: 20%; display: inline-block'>Title : </span> <form:input cssStyle="width: 30%" path="title"/>
+    <form:errors path="title" cssClass="error" element="div"/><br><br>
 
-    <br><br>
-    <span style='width: 8em; display: inline-block'>Description : </span><form:textarea cssStyle="width: 20em; height: 8em" path="description"/> <br>
-    <form:errors path="description" cssClass="error" element="div"/><br>
+
+    <span style='width: 20%; display: inline-block; vertical-align: top'>Description : </span>
+    <form:textarea cssStyle="width: 30%; height: 8em" path="description"/>
+    <form:errors path="description" cssClass="error" element="div"/><br><br>
 
     <form:hidden path="proposition" value="true" />
 

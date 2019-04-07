@@ -76,13 +76,13 @@ public class BookController {
     @GetMapping(path="/edit/{id}")
     public String forEdit(Model model, @PathVariable Long id) {
         model.addAttribute("book", bookService.findByIdService(id));
-        return "books/edit";
+        return "books/add";
     }
 
     @PostMapping(path = "/edit/{id}")
     public String save(@Validated({ValidationBook.class}) Book book, BindingResult result) {
         if(result.hasErrors()) {
-            return "books/edit";
+            return "books/add";
         }
         bookService.editBookService(book);
         return "redirect:/books/all";

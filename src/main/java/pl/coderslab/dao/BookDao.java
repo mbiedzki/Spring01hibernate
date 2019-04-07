@@ -3,7 +3,6 @@ package pl.coderslab.dao;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.model.Book;
-import pl.coderslab.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

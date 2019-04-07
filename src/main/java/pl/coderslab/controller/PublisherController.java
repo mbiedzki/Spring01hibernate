@@ -38,13 +38,13 @@ public class PublisherController {
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Long id) {
         model.addAttribute("publisher", publisherService.findPublisherByIdService(id));
-        return "publishers/edit";
+        return "publishers/add";
     }
 
     @PostMapping(path = "/edit/{id}")
     public String edit(@Valid Publisher publisher, BindingResult result) {
         if(result.hasErrors()) {
-            return "publishers/edit";
+            return "publishers/add";
         }
         publisherService.editPublisherService(publisher);
         return "redirect:/publishers/all";

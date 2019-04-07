@@ -13,20 +13,20 @@
 </head>
 <body>
 <div class="w3-blue-gray w3-container" align="center">
-    <h1>Simple book management app</h1>
-    <h1>Add publisher</h1>
+    <h2>Simple book management app</h2>
+    <h1>Edit publisher</h1>
 </div>
 <hr>
 
-<div class="w3-container w3-xlarge">
+<div class="w3-container w3-large">
 <form:form method="post" modelAttribute="publisher">
 
-    <span style='width: 8em; display: inline-block'>Name : </span> <form:input path="name"/><br>
-    <form:errors path="name" cssClass="error" element="div"/><br>
-    <span style='width: 8em; display: inline-block'>NIP : </span> <form:input path="nip"/><br>
-    <form:errors path="nip" cssClass="error" element="div"/><br>
-    <span style='width: 8em; display: inline-block'>REGON : </span> <form:input path="regon"/><br>
-    <form:errors path="regon" cssClass="error" element="div"/><br>
+    <span style='width: 20%; display: inline-block'>Name : </span> <form:input cssStyle="width: 30%" path="name"/>
+    <form:errors path="name" cssClass="error" element="div"/><br><br>
+    <span style='width: 20%; display: inline-block'>NIP : </span> <form:input cssStyle="width: 30%" path="nip"/>
+    <form:errors path="nip" cssClass="error" element="div"/><br><br>
+    <span style='width: 20%; display: inline-block'>REGON : </span> <form:input cssStyle="width: 30%" path="regon"/>
+    <form:errors path="regon" cssClass="error" element="div"/><br><br>
 
     <hr>
     <button type="submit"

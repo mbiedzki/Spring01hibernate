@@ -2,9 +2,6 @@ package pl.coderslab.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import pl.coderslab.model.Book;
-import pl.coderslab.model.Person;
-import pl.coderslab.model.PersonDetails;
 import pl.coderslab.model.Publisher;
 
 import javax.persistence.EntityManager;

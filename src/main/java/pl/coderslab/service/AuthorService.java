@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.dao.AuthorDao;
 import pl.coderslab.model.Author;
-import pl.coderslab.model.Person;
 import pl.coderslab.repository.AuthorRepository;
 
 import java.util.List;
@@ -39,4 +38,6 @@ public class AuthorService {
         return authorRepository.findAll();
         //return authorRepository.findAuthorByLastNameStartingWith("Le");
     }
+
+
 }

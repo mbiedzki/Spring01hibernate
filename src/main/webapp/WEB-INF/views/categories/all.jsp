@@ -1,52 +1,59 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: michal1
-  Date: 2019-02-21
-  Time: 12:49
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+
 <html>
 <head>
     <title>Title</title>
+    <style>
+        <%@include file="../w3.css" %>
+        <%@include file="../style.css" %>
+    </style>
 </head>
 <body>
-<h1>Kategorie</h1>
-
+<div class="w3-blue-gray w3-container" align="center">
+    <h2>Simple book management app</h2>
+    <h1>Categories</h1>
+</div>
+<hr>
 
 <c:if test="${deleteError==true}">
-    <span style="color: red;">Nie można usunąć kategorii, są do niej przypisane książki</span>
+    <div class="w3-container w3-light-gray w3-xlarge w3-center">Category cannot be deleted there are books assigned to it !</div><br><br>
 </c:if>
 
-<table border="1">
-    <thead>
-    <tr>
-        <td>nazwa</td>
-    </tr>
-    </thead>
-    <tbody>
-
-
-
-    <c:forEach items="${categories}" var="category">
-        <tr>
-            <td>
-                    ${category.name} <br>
-            </td>
-
-            <td><a href="/categories/edit/${category.id}">Edytuj kategorię</a></td>
-            <td><a href="/categories/delete/${category.id}" onclick="return confirm
-            ('Jesteś pewny, że chcesz usunąć ?')">Usuń kategorię</a></td>
+<div class="w3-container w3-large">
+    <table class="w3-table-all">
+        <thead>
+        <tr class="w3-blue-gray">
+            <td>ID</td>
+            <td>Name</td>
+            <td>Edit</td>
+            <td>Delete</td>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        <c:forEach items="${categories}" var="category">
+            <tr>
+                <td>${category.id}</td>
+                <td>${category.name}</td>
 
-<a href="/categories/add">Dodaj kategorię</a>
-<br><br>
-<a href="/">Powrót do strony głównej</a>
+                <td><a href="/categories/edit/${category.id}">Edit</a></td>
+                <td><a href="/categories/delete/${category.id}" onclick="return confirm
+            ('Are you sure that you want to delete ?')">Delete</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</div>
 
+<hr>
+<div class="w3-container">
+    <a href="${pageContext.request.contextPath}/categories/add"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">New</a>
+    <a href="${pageContext.request.contextPath}/"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Return</a>
+</div>
 
 </body>
 </html>

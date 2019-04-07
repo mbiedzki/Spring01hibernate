@@ -13,13 +13,13 @@
 </head>
 <body>
 <div class="w3-blue-gray w3-container" align="center">
-    <h1>Simple book management app</h1>
+    <h2>Simple book management app</h2>
     <h1>Authors</h1>
 </div>
 <hr>
 
-<div class="w3-container w3-xlarge">
-<table class="w3-table-all" border="1">
+<div class="w3-container w3-large">
+<table class="w3-table-all">
     <thead>
     <tr class="w3-blue-gray">
         <td>ID</td>
