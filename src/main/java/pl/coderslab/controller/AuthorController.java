@@ -51,13 +51,13 @@ public class AuthorController {
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable Long id) {
         model.addAttribute("author", authorService.findAuthorByIdService(id));
-        return "authors/edit";
+        return "authors/add";
     }
 
     @PostMapping(path = "/edit/{id}")
     public String edit(@Valid Author author, BindingResult result) {
         if(result.hasErrors()) {
-            return "authors/edit";
+            return "authors/add";
         }
         authorService.editAuthorService(author);
         return "redirect:/authors/all";

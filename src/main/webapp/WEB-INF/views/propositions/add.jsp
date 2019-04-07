@@ -1,31 +1,45 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: michal1
-  Date: 2019-02-20
-  Time: 15:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+
 <html>
 <head>
     <title>Title</title>
+    <style>
+        <%@include file="../w3.css" %>
+        <%@include file="../style.css" %>
+    </style>
 </head>
 <body>
-<h1>Dodaj Propozycje</h1>
+<div class="w3-blue-gray w3-container" align="center">
+    <h1>Simple book management app</h1>
+    <h1>Add book proposition</h1>
+</div>
+<hr>
 
+<div class="w3-container w3-xlarge">
 <form:form method="post" modelAttribute="book">
 
-    Tytuł: <form:input path="title"/> <br><br>
-    <form:errors path="title" cssClass="error" element="div"/>
+    <span style='width: 8em; display: inline-block'>Title : </span> <form:input cssStyle="width: 19em" path="title"/> <br>
+    <form:errors path="title" cssClass="error" element="div"/><br>
 
-    Opis: <form:textarea path="description"/> <br><br>
-    <form:errors path="description" cssClass="error" element="div"/>
+    <br><br>
+    <span style='width: 8em; display: inline-block'>Description : </span><form:textarea cssStyle="width: 20em; height: 8em" path="description"/> <br>
+    <form:errors path="description" cssClass="error" element="div"/><br>
 
     <form:hidden path="proposition" value="true" />
 
-    <input type="submit" value="Wyślij">
+    <hr>
+    <button type="submit"
+            class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">
+        Save</button>
+    <a href="${pageContext.request.contextPath}/"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Return</a>
 
 </form:form>
+</div>
+
+
 </body>
 </html>

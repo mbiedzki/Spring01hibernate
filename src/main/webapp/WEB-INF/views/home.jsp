@@ -1,31 +1,33 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: michal1
-  Date: 2019-02-19
-  Time: 21:17
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+
 <html>
 <head>
     <title>Title</title>
+    <style>
+        <%@include file="w3.css" %>
+    </style>
 </head>
 <body>
-<h1>Strona główna</h1>
+<div class="w3-blue-gray w3-container" align="center">
+<h1>Simple book management app</h1>
+</div>
+<hr>
 
-<a href="publishers/all" >Wydawcy</a><br><br>
-<a href="authors/all" >Autorzy</a><br><br>
-<a href="categories/all" >Kategorie</a><br><br>
-
-
-<a href="books/all" >Książki</a><br><br>
-<a href="propositions/add" >Dodawanie propozycji</a><br><br>
-
-<form action="/books/setRating" method="get">
-    <input type="number" name="rating">
-    <input type="submit" value="rating dla wszystkich">
-    </form>
-
+<div class="w3-container" align="center">
+<a href="${pageContext.request.contextPath}/publishers/all"
+   class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Publishers</a>
+    <a href="${pageContext.request.contextPath}/authors/all"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Authors</a>
+    <a href="${pageContext.request.contextPath}/categories/all"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Categories</a><hr>
+    <a href="${pageContext.request.contextPath}/books/all"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Books</a>
+    <a href="${pageContext.request.contextPath}/propositions/add"
+       class="w3-button w3-xlarge w3-border w3-border-blue-gray w3-round-xxlarge">Propositions</a><hr>
+</div>
 
 </body>
 </html>
