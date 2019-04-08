@@ -18,6 +18,11 @@ public class PublisherController {
     @Autowired
     private PublisherService publisherService;
 
+    @ModelAttribute("publishers")
+    public List<Publisher> getAuthor() {
+        return publisherService.readAllPublisherService();
+    }
+
     //add
     @GetMapping("/add")
     public String add(Model model) {
@@ -52,9 +57,14 @@ public class PublisherController {
 
     //delete
     @RequestMapping("/delete/{id}")
-    public String delete(@PathVariable Long id) {
-        publisherService.deletePublisherService(id);
-        return "redirect:/publishers/all";
+    public String delete(@PathVariable Long id, Model model) {
+        if (publisherService.noBooksWithPublisher(id)) {
+            publisherService.deletePublisherService(id);
+            return "redirect:/publishers/all";
+        } else {
+            model.addAttribute("deleteError", true);
+            return "publishers/all";
+        }
 
     }
 
@@ -65,42 +75,4 @@ public class PublisherController {
 
     }
 
-    /*@RequestMapping(path = "/add")
-    public String add() {
-        Publisher publisher = new Publisher("Iskry");
-        publisherService.savePublisherService(publisher);
-        return "Utworzono wydawcę : " + publisher;
-    }
-
-    @RequestMapping(path = "/changePublisher/{id}")
-    @ResponseBody
-    public String changePublisher(@PathVariable Long id) {
-        Long display = id;
-        publisherService.editPublisherService(id);
-        return "Wydawca został zedytowany : "+display;
-    }
-
-    @RequestMapping("/getPublisher/{id}")
-    @ResponseBody
-    public String getPublisher(@PathVariable Long id) {
-        Publisher publisher = publisherService.findPublisherByIdService(id);
-        return "Wybrałes wydawcę : "+publisher;
-
-    }
-    @RequestMapping("/deletePublisher/{id}")
-    @ResponseBody
-    public String deletePublisher(@PathVariable Long id) {
-        Long display = id;
-        publisherService.deletePublisherService(id);
-        return "Wydawca usunięty : "+display;
-
-    }
-
-    @RequestMapping("/getAllPublisher")
-    @ResponseBody
-    public String getAllPublisher() {
-        List<Publisher> publisherList = publisherService.readAllPublisherService();
-        return "Wszyscy wydawcy : " + publisherList;
-
-    }*/
 }

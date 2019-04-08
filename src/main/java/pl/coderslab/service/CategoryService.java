@@ -36,6 +36,8 @@ public class CategoryService {
         categoryRepository.delete(id);
     }
 
+    public Long countCategories() {return categoryRepository.countCategories();}
+
     public boolean noBooksInCategory(Long id) {
         Category category = categoryRepository.findOne(id);
         List<Book> books = bookRepository.findBookByCategory(category);

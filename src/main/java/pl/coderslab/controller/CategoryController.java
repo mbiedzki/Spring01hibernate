@@ -71,7 +71,7 @@ public class CategoryController {
             return "redirect:/categories/all";
         } else {
             model.addAttribute("deleteError", true);
-            return "/categories/all";
+            return "categories/all";
         }
     }
 

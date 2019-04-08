@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.coderslab.dao.PublisherDao;
 import pl.coderslab.model.Author;
+import pl.coderslab.model.Book;
 import pl.coderslab.model.Publisher;
+import pl.coderslab.repository.BookRepository;
 import pl.coderslab.repository.PublisherRepository;
 
 import java.util.List;
@@ -17,6 +19,8 @@ public class PublisherService {
     private PublisherDao publisherDao;
     @Autowired
     private PublisherRepository publisherRepository;
+    @Autowired
+    private BookRepository bookRepository;
 
     public void savePublisherService(Publisher entity) {
         publisherRepository.save(entity);
@@ -36,6 +40,18 @@ public class PublisherService {
 
     public List<Publisher> readAllPublisherService() {
         return publisherRepository.findAll();
-        //return publisherRepository.findPublisherByRegon("280034594");
     }
+
+    public Long countPublishers() {return publisherRepository.countPublishers();}
+
+    public boolean noBooksWithPublisher(Long id) {
+        Publisher publisher = publisherRepository.findOne(id);
+        List<Book> books = bookRepository.findBookByPublisher(publisher);
+        if (!books.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }

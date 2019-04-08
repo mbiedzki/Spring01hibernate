@@ -43,6 +43,8 @@ public class BookService {
 
     public void setRating(Double rating) {bookRepository.setRating(rating);}
 
+    public Long countBooks() {return bookRepository.countBooks();}
+
     public List<Book> readAllBookService() {
         return bookRepository.findAll();
 

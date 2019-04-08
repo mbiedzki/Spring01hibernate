@@ -27,8 +27,7 @@ public class Book {
     private List<Author> authors = new ArrayList<>();
 
     @Column(precision = 4, scale = 2)
-    @NotNull(groups={ValidationBook.class})
-    @Min(1)
+    @Min(0)
     @Max(10)
     @ColumnDefault("1")
     private Double rating;
@@ -43,8 +42,8 @@ public class Book {
     private String description;
 
 
-    @Min(value = 1, groups = {ValidationBook.class})
-    @ColumnDefault("1")
+    @Min(value = 0, groups = {ValidationBook.class})
+    @ColumnDefault("0")
     private int pages;
 
     @ColumnDefault("0")

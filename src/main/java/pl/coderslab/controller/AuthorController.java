@@ -19,13 +19,9 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @RequestMapping(path = "/createAuthor")
-    @ResponseBody
-    public String createAuthor() {
-        List<Book> books = new ArrayList<>();
-        Author author = new Author("Jan", "Kowalski");
-        authorService.saveAuthorService(author);
-        return "Utworzono autora : " + author;
+    @ModelAttribute("authors")
+    public List<Author> getAuthor() {
+        return authorService.readAllAuthorService();
     }
 
     //add
@@ -63,39 +59,17 @@ public class AuthorController {
 
     //delete
     @RequestMapping("/delete/{id}")
-    public String delete(@PathVariable Long id) {
-        authorService.deleteAuthorService(id);
-        return "redirect:/authors/all";
-
+    public String delete(@PathVariable Long id, Model model) {
+        if (authorService.noBooksWithAuthor(id)) {
+            authorService.deleteAuthorService(id);
+            return "redirect:/authors/all";
+        } else {
+            model.addAttribute("deleteError", true);
+            return "authors/all";
+        }
     }
 
-
-    /*@RequestMapping(path = "/changeAuthor/{id}")
-    @ResponseBody
-    public String changeAuthor(@PathVariable Long id) {
-        Long display = id;
-        authorService.editAuthorService(id);
-        return "Autor został zedytowany : "+display;
-    }*/
-
-    @RequestMapping("/getAuthor/{id}")
-    @ResponseBody
-    public String getAuthor(@PathVariable Long id) {
-        Author author = authorService.findAuthorByIdService(id);
-        return "Wybrałes autora : "+author;
-
-    }
-
-    @RequestMapping("/deleteAuthor/{id}")
-    @ResponseBody
-    public String deleteAuthor(@PathVariable Long id) {
-        Long display = id;
-        authorService.deleteAuthorService(id);
-        return "Autor usunięty : "+display;
-
-    }
-
-    @RequestMapping("/all")
+    @GetMapping("/all")
     public String getAllAuthor(Model model) {
         model.addAttribute("authors", authorService.readAllAuthorService());
         return "authors/all";

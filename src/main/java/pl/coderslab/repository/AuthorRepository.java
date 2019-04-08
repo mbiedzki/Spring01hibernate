@@ -15,4 +15,7 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     List<Author> findAuthorByLastNameStartingWith(String string);
 
+    @Query("SELECT count(authors.id) from Author authors")
+    Long countAuthors();
+
 }

@@ -18,6 +18,10 @@
 </div>
 <hr>
 
+<c:if test="${deleteError==true}">
+    <div class="w3-container w3-light-gray w3-xlarge w3-center">Publisher cannot be deleted there are books assigned to it !</div><br><br>
+</c:if>
+
 <div class="w3-container w3-large">
     <table class="w3-table-all">
         <thead>

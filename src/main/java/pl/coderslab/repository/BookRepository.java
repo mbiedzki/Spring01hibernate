@@ -27,11 +27,17 @@ public interface BookRepository extends JpaRepository<Book, Long>, BookRepo {
 
     List<Book> findBookByRating(Double rating);
 
+    @Query("SELECT count(books.id) from Book books")
+    Long countBooks();
+
     @Query("select book from Book book where book.title = ?1")
     List<Book> findBookByTitleByQuery(String title);
 
     @Query("select book from Book book where book.category = :category")
     List<Book> findBookByCategoryIdByQuery(@Param("category") Category category);
+
+    @Query("select book from Book book where book.authors = :authors")
+    List<Book> findBookByAuthorsIdByQuery(@Param("authors") Author author);
 
     //Listę książek dla których rating jest pomiędzy zadanymi parametrami np. między 3 a 5.
     @Query("select book from Book book where book.rating between 4 and 5")
