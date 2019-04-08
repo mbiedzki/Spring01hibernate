@@ -44,7 +44,7 @@
 <hr>
 
 <div align="center">
-    <img src="/images/books.jpg" alt="Logo" style="width:75%; display: inline-block">
+    <img src="${pageContext.request.contextPath}/images/books.jpg" alt="Logo" style="width:75%; display: inline-block">
 </div>
 
 </body>

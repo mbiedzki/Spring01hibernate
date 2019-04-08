@@ -58,8 +58,8 @@
                     </c:choose>
                 </td>
 
-                <td><a href="/books/edit/${book.id}">Edit</a></td>
-                <td><a href="/books/delete/${book.id}" onclick="return confirm
+                <td><a href="${pageContext.request.contextPath}/books/edit/${book.id}">Edit</a></td>
+                <td><a href="${pageContext.request.contextPath}/books/delete/${book.id}" onclick="return confirm
             ('Are you sure that you want to delete ?')">Delete</a></td>
             </tr>
         </c:forEach>

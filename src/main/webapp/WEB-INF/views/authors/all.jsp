@@ -47,8 +47,8 @@
             </c:forEach>
             </td>
 
-            <td><a href="/authors/edit/${author.id}">Edit</a></td>
-            <td><a href="/authors/delete/${author.id}" onclick="return confirm
+            <td><a href="${pageContext.request.contextPath}/authors/edit/${author.id}">Edit</a></td>
+            <td><a href="${pageContext.request.contextPath}/authors/delete/${author.id}" onclick="return confirm
             ('Are you sure that you want to delete ?')">Delete</a></td>
         </tr>
     </c:forEach>

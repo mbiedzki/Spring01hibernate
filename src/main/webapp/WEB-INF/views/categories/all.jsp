@@ -38,8 +38,8 @@
                 <td>${category.id}</td>
                 <td>${category.name}</td>
 
-                <td><a href="/categories/edit/${category.id}">Edit</a></td>
-                <td><a href="/categories/delete/${category.id}" onclick="return confirm
+                <td><a href="${pageContext.request.contextPath}/categories/edit/${category.id}">Edit</a></td>
+                <td><a href="${pageContext.request.contextPath}/categories/delete/${category.id}" onclick="return confirm
             ('Are you sure that you want to delete ?')">Delete</a></td>
             </tr>
         </c:forEach>
