@@ -20,7 +20,7 @@ public class Book {
 
     @Column(length = 100)
     @NotBlank(groups={ValidationBook.class, ValidationProposition.class})
-    @Size(min = 5, max = 100)
+    @Size(min = 1, max = 100)
     private String title;
 
     @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)
@@ -38,7 +38,7 @@ public class Book {
 
     @Column(length = 600)
     @Size(max = 600)
-    @NotBlank(groups={ValidationProposition.class})
+    @NotBlank(groups={ValidationBook.class, ValidationProposition.class})
     private String description;
 
 
