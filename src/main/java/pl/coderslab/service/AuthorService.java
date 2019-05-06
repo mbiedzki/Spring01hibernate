@@ -39,7 +39,9 @@ public class AuthorService {
         authorRepository.delete(id);
     }
 
-    public Long countAuthors() {return authorRepository.countAuthors();}
+    public Long countAuthors() {
+        return authorRepository.countAuthors();
+    }
 
     public List<Author> readAllAuthorService() {
         return authorRepository.findAll();

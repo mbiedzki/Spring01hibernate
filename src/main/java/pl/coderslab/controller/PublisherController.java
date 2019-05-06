@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@RequestMapping(path="/publishers", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/publishers", produces = "text/html; charset=UTF-8")
 public class PublisherController {
     @Autowired
     private PublisherService publisherService;
@@ -32,7 +32,7 @@ public class PublisherController {
 
     @PostMapping(path = "/add")
     public String add(@Valid Publisher publisher, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "publishers/add";
         }
         publisherService.savePublisherService(publisher);
@@ -48,7 +48,7 @@ public class PublisherController {
 
     @PostMapping(path = "/edit/{id}")
     public String edit(@Valid Publisher publisher, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "publishers/add";
         }
         publisherService.editPublisherService(publisher);

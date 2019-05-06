@@ -42,7 +42,9 @@ public class PublisherService {
         return publisherRepository.findAll();
     }
 
-    public Long countPublishers() {return publisherRepository.countPublishers();}
+    public Long countPublishers() {
+        return publisherRepository.countPublishers();
+    }
 
     public boolean noBooksWithPublisher(Long id) {
         Publisher publisher = publisherRepository.findOne(id);

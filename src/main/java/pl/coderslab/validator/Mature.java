@@ -12,5 +12,8 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Mature {
     String message() default "{mature.error.message}";
+
     Class<?>[] groups() default {};
-    Class<? extends Payload>[] payload() default {}; }
+
+    Class<? extends Payload>[] payload() default {};
+}

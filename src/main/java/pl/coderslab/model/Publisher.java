@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="publishers")
+@Table(name = "publishers")
 public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

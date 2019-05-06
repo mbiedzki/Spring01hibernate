@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping(path="/authors", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/authors", produces = "text/html; charset=UTF-8")
 public class AuthorController {
     @Autowired
     private AuthorService authorService;
@@ -33,7 +33,7 @@ public class AuthorController {
 
     @PostMapping(path = "/add")
     public String add(@Valid Author author, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "authors/add";
         }
 
@@ -50,7 +50,7 @@ public class AuthorController {
 
     @PostMapping(path = "/edit/{id}")
     public String edit(@Valid Author author, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "authors/add";
         }
         authorService.editAuthorService(author);
@@ -75,7 +75,6 @@ public class AuthorController {
         return "authors/all";
 
     }
-
 
 
 }

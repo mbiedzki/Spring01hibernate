@@ -26,7 +26,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping(path="/books", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/books", produces = "text/html; charset=UTF-8")
 public class BookController {
     @Autowired
     private BookService bookService;
@@ -63,7 +63,7 @@ public class BookController {
 
     @PostMapping(path = "/add")
     public String add(@Validated({ValidationBook.class}) Book book, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "books/add";
         }
 
@@ -73,7 +73,7 @@ public class BookController {
 
 
     //edit
-    @GetMapping(path="/edit/{id}")
+    @GetMapping(path = "/edit/{id}")
     public String forEdit(Model model, @PathVariable Long id) {
         model.addAttribute("book", bookService.findByIdService(id));
         return "books/add";
@@ -81,7 +81,7 @@ public class BookController {
 
     @PostMapping(path = "/edit/{id}")
     public String save(@Validated({ValidationBook.class}) Book book, BindingResult result) {
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "books/add";
         }
         bookService.editBookService(book);
@@ -93,7 +93,7 @@ public class BookController {
     @ResponseBody
     public String get(@PathVariable Long id) {
         Book book = bookService.findByIdService(id);
-        return "Wybrałes ksiażke :"+book;
+        return "Wybrałes ksiażke :" + book;
 
     }
 
@@ -120,7 +120,7 @@ public class BookController {
     }
 
     //set rating
-    @GetMapping(path="/setRating")
+    @GetMapping(path = "/setRating")
     public String setRating(@RequestParam Double rating) {
         bookService.setRating(rating);
         return "redirect: /books/all";

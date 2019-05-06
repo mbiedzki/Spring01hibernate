@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 @Controller
-@RequestMapping(path="/validations", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/validations", produces = "text/html; charset=UTF-8")
 
 public class ValidationController {
     @Autowired

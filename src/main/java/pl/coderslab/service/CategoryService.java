@@ -36,7 +36,9 @@ public class CategoryService {
         categoryRepository.delete(id);
     }
 
-    public Long countCategories() {return categoryRepository.countCategories();}
+    public Long countCategories() {
+        return categoryRepository.countCategories();
+    }
 
     public boolean noBooksInCategory(Long id) {
         Category category = categoryRepository.findOne(id);
@@ -44,16 +46,14 @@ public class CategoryService {
         if (!books.isEmpty()) {
             return false;
         } else {
-        return true;
-    }
+            return true;
+        }
     }
 
 
     public List<Category> readAllCategoryService() {
         return categoryRepository.findAll();
     }
-
-
 
 
 }

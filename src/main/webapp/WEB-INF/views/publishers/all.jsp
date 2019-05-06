@@ -19,7 +19,10 @@
 <hr>
 
 <c:if test="${deleteError==true}">
-    <div class="w3-container w3-light-gray w3-xlarge w3-center">Publisher cannot be deleted there are books assigned to it !</div><br><br>
+    <div class="w3-container w3-light-gray w3-xlarge w3-center">Publisher cannot be deleted there are books assigned to
+        it !
+    </div>
+    <br><br>
 </c:if>
 
 <div class="w3-container w3-large">
@@ -34,16 +37,16 @@
         </tr>
         </thead>
         <tbody>
-            <c:forEach items="${publishers}" var="publisher">
-                <tr>
-                    <td>${publisher.id}</td>
-                    <td>${publisher.name}</td>
+        <c:forEach items="${publishers}" var="publisher">
+            <tr>
+                <td>${publisher.id}</td>
+                <td>${publisher.name}</td>
 
-                    <td>
-                        <c:forEach items="${publisher.books}" var="book">
-                            ${book.title} <br>
-                        </c:forEach>
-                    </td>
+                <td>
+                    <c:forEach items="${publisher.books}" var="book">
+                        ${book.title} <br>
+                    </c:forEach>
+                </td>
 
                 <td><a href="${pageContext.request.contextPath}/publishers/edit/${publisher.id}">Edit</a></td>
                 <td><a href="${pageContext.request.contextPath}/publishers/delete/${publisher.id}" onclick="return confirm

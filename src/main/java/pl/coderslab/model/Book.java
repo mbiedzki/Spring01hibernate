@@ -12,14 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="books")
+@Table(name = "books")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 100)
-    @NotBlank(groups={ValidationBook.class, ValidationProposition.class})
+    @NotBlank(groups = {ValidationBook.class, ValidationProposition.class})
     @Size(min = 1, max = 100)
     private String title;
 
@@ -38,7 +38,7 @@ public class Book {
 
     @Column(length = 600)
     @Size(max = 600)
-    @NotBlank(groups={ValidationBook.class, ValidationProposition.class})
+    @NotBlank(groups = {ValidationBook.class, ValidationProposition.class})
     private String description;
 
 

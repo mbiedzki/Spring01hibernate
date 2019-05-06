@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="authors")
+@Table(name = "authors")
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ public class Author {
     @Email
     private String email;
 
-    @Column(name="year_of_birth", length = 4)
+    @Column(name = "year_of_birth", length = 4)
     @Mature
     private int yearOfBirth;
 
@@ -79,7 +79,8 @@ public class Author {
     }
 
     public String getFullName() {
-        return lastName+" "+firstName; }
+        return lastName + " " + firstName;
+    }
 
     public String getPesel() {
         return pesel;

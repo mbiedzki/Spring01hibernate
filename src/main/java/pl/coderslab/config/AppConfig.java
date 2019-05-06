@@ -19,6 +19,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import pl.coderslab.converter.AuthorConverter;
 import pl.coderslab.converter.CategoryConverter;
 import pl.coderslab.converter.PublisherConverter;
+
 import javax.persistence.EntityManagerFactory;
 import javax.validation.Validator;
 import java.util.Locale;
@@ -36,7 +37,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
                 new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
-        return viewResolver; }
+        return viewResolver;
+    }
 
     @Override
     public void configureDefaultServletHandling(
@@ -48,12 +50,14 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public LocalEntityManagerFactoryBean entityManagerFactory() {
         LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
         emfb.setPersistenceUnitName("bookstorePersistenceUnit");
-        return emfb; }
+        return emfb;
+    }
 
     @Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
         JpaTransactionManager tm = new JpaTransactionManager(emf);
-        return tm; }
+        return tm;
+    }
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
@@ -78,11 +82,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     }
 
 
-    @Bean(name="localeResolver")
+    @Bean(name = "localeResolver")
     public LocaleContextResolver getLocaleContextResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-        localeResolver.setDefaultLocale(new Locale("pl","PL"));
-        return localeResolver; }
+        localeResolver.setDefaultLocale(new Locale("pl", "PL"));
+        return localeResolver;
+    }
 
     @Bean
     public Validator validator() {

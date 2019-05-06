@@ -16,6 +16,7 @@ public class BookDao {
 
     @PersistenceContext
     EntityManager entityManager;
+
     public void saveBook(Book entity) {
         entityManager.persist(entity);
     }
@@ -35,14 +36,14 @@ public class BookDao {
 
     public List<Book> findAll() {
         Query query = entityManager.createQuery("SELECT book FROM Book book");
-        List<Book> bookList  = query.getResultList();
+        List<Book> bookList = query.getResultList();
         return bookList;
     }
 
     public List<Book> getRatingList(int rating) {
         Query query = entityManager.createQuery("SELECT book FROM Book book WHERE rating >:rating");
         query.setParameter("rating", rating);
-        List<Book> bookList  = query.getResultList();
+        List<Book> bookList = query.getResultList();
         return bookList;
     }
 

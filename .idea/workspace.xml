@@ -8,9 +8,35 @@
   <component name="ChangeListManager">
     <list default="true" id="0bdd1517-d2a8-4b6f-8dd1-988e3b2f11d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/CategoryConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/CategoryConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/PublisherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/PublisherDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MatureValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MatureValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/books.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/images/books.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/coderslab/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/coderslab/model/Book.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,20 +50,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,25 +76,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/PublisherConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/AuthorConverter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/add.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/ValidationMessages_pl.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/validations/validation.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MatureValidator.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Publisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/ValidationBook.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/CategoryConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepositoryImpl.java" />
@@ -89,31 +91,42 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/add.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/addEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/add.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/CategoryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/BookService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/PublisherRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/repository/CategoryRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/CategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/converter/CategoryConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/dao/PublisherDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/model/Publisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/CategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/coderslab/validator/MatureValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
       </list>
     </option>
   </component>
@@ -132,10 +145,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1057" />
-    <option name="y" value="53" />
-    <option name="width" value="1471" />
-    <option name="height" value="1275" />
+    <option name="x" value="1126" />
+    <option name="y" value="33" />
+    <option name="width" value="1366" />
+    <option name="height" value="1293" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -143,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -376,13 +390,22 @@
             <path>
               <item name="simple_books" type="b2602c69:ProjectViewProjectNode" />
               <item name="simple_books" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="validations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simple_books" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simple_books" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,14 +423,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -522,7 +545,14 @@
       <workItem from="1554625246951" duration="7013000" />
       <workItem from="1554655891474" duration="8700000" />
       <workItem from="1554730161708" duration="9228000" />
-      <workItem from="1554794665534" duration="922000" />
+      <workItem from="1554794665534" duration="963000" />
+      <workItem from="1554883322639" duration="597000" />
+      <workItem from="1555493871128" duration="187000" />
+      <workItem from="1555503442842" duration="110000" />
+      <workItem from="1555503569654" duration="2829000" />
+      <workItem from="1555576177433" duration="2659000" />
+      <workItem from="1555777417653" duration="1798000" />
+      <workItem from="1557151432951" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="18.02 14:30">
       <created>1550496748731</created>
@@ -678,17 +708,23 @@
       <option name="project" value="LOCAL" />
       <updated>1554739654208</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="04.09 MySQL config">
+      <created>1554795620788</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1554795620788</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143169000" />
+    <option name="totallyTimeSpent" value="151754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1057" y="53" width="1471" height="1275" extended-state="0" />
-    <editor active="true" />
+    <frame x="1126" y="33" width="1366" height="1293" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29881036" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2900302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -699,7 +735,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32882503" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32882503" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892906" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -749,7 +785,9 @@
     <MESSAGE value="21.03" />
     <MESSAGE value="04.07 css styling" />
     <MESSAGE value="04.08 to deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="04.08 to deploy" />
+    <MESSAGE value="04.08 MySQL config" />
+    <MESSAGE value="04.09 MySQL config" />
+    <option name="LAST_COMMIT_MESSAGE" value="04.09 MySQL config" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -771,82 +809,12 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="74" column="9" lean-forward="true" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="99" column="33" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2088#2089#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-            <element signature="e#2185#2186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/edit.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/persons/add.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/students/add.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PersonController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/StudentController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Person.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/PersonDetails.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/validations/validation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ValidationMessages_pl.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="64" lean-forward="true" selection-start-column="64" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -864,6 +832,190 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/books.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1031">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/propositions/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="27" column="73" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/validations/validation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/app/AppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="876">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PropositionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/ValidationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/converter/AuthorConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/converter/CategoryConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/converter/PublisherConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#32#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#1" expanded="true" />
+            <element signature="e#0#48#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/PublisherDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -874,42 +1026,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/dao/AuthorDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Publisher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <element signature="e#0#32#1" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#44#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/CategoryController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/PublisherController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="983">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="405">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/AuthorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#38#1" expanded="true" />
+            <element signature="e#0#48#1" expanded="true" />
+            <element signature="e#0#58#1" expanded="true" />
+            <element signature="e#0#56#1" expanded="true" />
+            <element signature="e#0#60#1" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,17 +1078,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/CategoryRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="e#0#52#1" expanded="true" />
           </folding>
@@ -944,150 +1090,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/PublisherRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="60">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="e#0#53#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/AuthorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#38#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/repository/BookRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#34#0" expanded="true" />
-            <element signature="e#0#48#1" expanded="true" />
-            <element signature="e#0#58#1" expanded="true" />
-            <element signature="e#0#56#1" expanded="true" />
-            <element signature="e#0#60#1" expanded="true" />
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/AuthorService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+        <state relative-caret-position="525">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/BookService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="630">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/CategoryService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="555">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#624#625#0" expanded="true" />
             <element signature="e#677#678#0" expanded="true" />
             <element signature="e#941#942#0" expanded="true" />
             <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1330#1331#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1082#1083#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/service/PublisherService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/books.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="82" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="82" />
+        <state relative-caret-position="405">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="41" column="63" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
-          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,30 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/propositions/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="27" column="73" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/controller/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="86" column="42" lean-forward="true" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,23 +1182,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/validator/Mature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="405">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ValidationMessages_pl.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="64" selection-start-column="64" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="109" selection-start-line="26" selection-start-column="109" selection-end-line="26" selection-end-column="109" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/coderslab/model/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/authors/all.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="73" lean-forward="true" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="464">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/categories/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/publishers/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>

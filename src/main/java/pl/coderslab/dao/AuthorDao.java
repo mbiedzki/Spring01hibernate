@@ -15,6 +15,7 @@ public class AuthorDao {
 
     @PersistenceContext
     EntityManager entityManager;
+
     public void saveAuthor(Author entity) {
         entityManager.persist(entity);
     }
@@ -34,7 +35,7 @@ public class AuthorDao {
 
     public List<Author> findAll() {
         Query query = entityManager.createQuery("SELECT author FROM Author author");
-        List<Author> authorList  = query.getResultList();
+        List<Author> authorList = query.getResultList();
         return authorList;
     }
 

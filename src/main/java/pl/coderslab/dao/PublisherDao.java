@@ -14,6 +14,7 @@ import java.util.List;
 public class PublisherDao {
     @PersistenceContext
     EntityManager entityManager;
+
     public void savePublisher(Publisher entity) {
         entityManager.persist(entity);
     }
@@ -33,7 +34,7 @@ public class PublisherDao {
 
     public List<Publisher> findAll() {
         Query query = entityManager.createQuery("SELECT publisher FROM Publisher publisher");
-        List<Publisher> publisherList  = query.getResultList();
+        List<Publisher> publisherList = query.getResultList();
         return publisherList;
     }
 }

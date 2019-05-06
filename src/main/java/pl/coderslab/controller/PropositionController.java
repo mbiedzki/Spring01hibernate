@@ -13,7 +13,7 @@ import pl.coderslab.service.BookService;
 import pl.coderslab.validator.ValidationProposition;
 
 @Controller
-@RequestMapping(path="/propositions", produces = "text/html; charset=UTF-8")
+@RequestMapping(path = "/propositions", produces = "text/html; charset=UTF-8")
 public class PropositionController {
 
     @Autowired

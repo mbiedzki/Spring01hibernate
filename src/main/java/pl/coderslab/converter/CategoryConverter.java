@@ -7,11 +7,11 @@ import pl.coderslab.service.CategoryService;
 
 public class CategoryConverter implements Converter<String, Category> {
 
-@Autowired
-private CategoryService categoryService;
+    @Autowired
+    private CategoryService categoryService;
 
-@Override
-public Category convert(String s) {
+    @Override
+    public Category convert(String s) {
         return categoryService.findByIdService(Long.parseLong(s));
-        }
+    }
 }

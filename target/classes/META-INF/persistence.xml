@@ -6,18 +6,23 @@
     <persistence-unit name="bookstorePersistenceUnit">
         <properties>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost:3306/bookStore" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="coderslab" />
+                      value="jdbc:mysql://localhost:3306/bookStore"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="coderslab"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.schema-generation.database.action"
                       value="update"/>
-                        <!--value="drop-and-create"/>-->
+            <!--value="drop-and-create"/>-->
             <property name="hibernate.dialect"
-                      value="org.hibernate.dialect.MySQL57Dialect" />
-            <property name="hibernate.connection.useUnicode" value="true" />
-            <property name="hibernate.connection.characterEncoding" value="utf8" />
-            <property name="hibernate.connection.CharSet" value="utf8" />
-            <!--<property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>-->
-        </properties></persistence-unit></persistence>
+                      value="org.hibernate.dialect.MySQL57Dialect"/>
+            <property name="hibernate.connection.useUnicode" value="true"/>
+            <property name="hibernate.connection.characterEncoding" value="utf8"/>
+            <property name="hibernate.connection.CharSet" value="utf8"/>
+
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="300"/>
+
+        </properties>
+    </persistence-unit>
+</persistence>
