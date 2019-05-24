@@ -18,6 +18,15 @@
 </div>
 <hr>
 
+<c:if test="${sorry==true}">
+    <div class="w3-container w3-light-gray w3-xlarge w3-center">
+        To keep minimum test database we do not allow to delete books with id < 9 !<br/>
+        Please add your own book and delete it then :-)
+    </div>
+    <br/>
+</c:if>
+
+
 <div class="w3-container w3-large">
     <table class="w3-table-all">
         <thead>

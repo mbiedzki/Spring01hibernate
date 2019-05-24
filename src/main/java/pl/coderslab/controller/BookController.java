@@ -99,7 +99,15 @@ public class BookController {
 
     //delete
     @RequestMapping("/delete/{id}")
-    public String delete(@PathVariable Long id) {
+    public String delete(@PathVariable Long id, Model model) {
+
+    //just for test app we do not allow to delete book with id <9 to keep minimum test database intact
+    //several times somebody deleted all books
+        if(id < 9) {
+            model.addAttribute("sorry", true);
+            model.addAttribute("books", bookService.readAllBookService());
+            return "books/all";
+        }
         bookService.deleteBookService(id);
         return "redirect:/books/all";
 
